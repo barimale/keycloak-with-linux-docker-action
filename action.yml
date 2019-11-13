@@ -11,6 +11,6 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'jboss/keycloak'
+  image: 'docker://jboss/keycloak'
   args:
     - ${{ inputs.who-to-greet }} 
