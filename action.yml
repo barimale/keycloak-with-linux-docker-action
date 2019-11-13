@@ -24,4 +24,4 @@ runs:
     - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
     - -DKEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
     - -DKEYCLOAK_IMPORT=${{inputs.realm-path }}
-    - &
+    - "&"
