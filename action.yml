@@ -10,6 +10,10 @@ inputs:
     description: 'admin account password'
     required: true
     default: 'admin'
+  realm-path:  # id of input
+    description: 'realm-path'
+    required: true
+    default: 'realm-export.json'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -19,3 +23,4 @@ runs:
   args:
     - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
     - -DKEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
+    - -DKEYCLOAK_IMPORT=${{inputs.realm-path }}
