@@ -1,3 +1,5 @@
-#download keycloak
-#unpack to c:\keycloak
-#execute standalone.bat with import-realm.json and login and pass as admin/admin
+#!/bin/sh -l
+
+echo "Hello $1"
+time=$(date)
+echo ::set-output name=time::$time
