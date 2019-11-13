@@ -228,5 +228,5 @@ fi
 # Start Keycloak #
 ##################
 
-exec /opt/jboss/keycloak/bin/standalone.sh $SYS_PROPS $@ &
+exec /opt/jboss/keycloak/bin/standalone.sh $SYS_PROPS $@
 exit $?
