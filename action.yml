@@ -1,11 +1,15 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Create preconfigured keycloak instance'
+description: 'Run Keycloak, create admin, import realm'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  admin-account-name:  # id of input
+    description: 'admin account name'
     required: true
-    default: 'World'
+    default: 'admin'
+  admin-account-password:  # id of input
+    description: 'admin account password'
+    required: true
+    default: 'admin'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -13,4 +17,4 @@ runs:
   using: 'docker'
   image: 'docker://jboss/keycloak'
   args:
-    - ${{ inputs.who-to-greet }} 
+    - ${{ -e KEYCLOAK_USER=inputs.admin-account-name }} 
