@@ -17,4 +17,4 @@ runs:
   using: 'docker'
   image: 'docker://jboss/keycloak'
   args:
-    - e KEYCLOAK_USER=${{inputs.admin-account-name }} 
+    - -DKEYCLOAK_USER=${{inputs.admin-account-name }} 
