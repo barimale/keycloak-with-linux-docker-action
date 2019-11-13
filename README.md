@@ -1,5 +1,5 @@
 # keycloak_with_linux_docker_action
-### create image based on Dockerfile
+### create an image based on the Dockerfile
 '''
 docker build .
 '''
