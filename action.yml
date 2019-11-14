@@ -13,7 +13,7 @@ inputs:
   realm-path:  # id of input
     description: 'realm-path'
     required: true
-    default: 'realm-export.json'
+    default: '/opt/jboss/tools/realm-export.json'
 runs:
   using: 'docker'
   image: 'Dockerfile'
