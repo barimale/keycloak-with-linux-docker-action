@@ -16,7 +16,7 @@ inputs:
     default: 'realm-export.json'
 runs:
   using: 'docker'
-  image: 'docker://jboss/keycloak'
+  image: 'Dockerfile'
   args:
     - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
     - -DKEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
