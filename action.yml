@@ -18,6 +18,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
-    - -DKEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
-    - -DKEYCLOAK_IMPORT=${{inputs.realm-path }}
+    - -e KEYCLOAK_USER=${{inputs.admin-account-name }}
+    - -e KEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
+    - -e KEYCLOAK_IMPORT=${{inputs.realm-path }}
