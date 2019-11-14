@@ -10,7 +10,7 @@ ENV PROXY_ADDRESS_FORWARDING false
 ENV JBOSS_HOME /opt/jboss/keycloak
 
 USER root
-ADD tools/ /opt/jboss/tools/docker-entrypoint.sh
+ADD tools/docker-entrypoint.sh /opt/jboss/tools/
 
 USER root
 RUN chmod 777 /opt/jboss/tools/docker-entrypoint.sh
