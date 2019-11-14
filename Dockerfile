@@ -15,7 +15,7 @@ ADD realm-export.json /opt/jboss/tools/
 
 USER root
 RUN sed -i '$d' /opt/jboss/tools/docker-entrypoint.sh
-RUN sed '${s/$/ &/}' /opt/jboss/tools/docker-entrypoint.sh
+RUN sed -i '${s/$/ &/}' /opt/jboss/tools/docker-entrypoint.sh
 
 #RUN chmod 777 /opt/jboss/tools/docker-entrypoint.sh
 RUN chmod 777 /opt/jboss/tools/realm-export.json
