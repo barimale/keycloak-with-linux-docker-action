@@ -21,7 +21,7 @@ RUN microdnf update -y && microdnf install -y gzip hostname java-11-openjdk-head
 
 USER root
 
-sudo chmod -R 777 /tools
+chmod -R 777 /tools
 
 ADD tools /opt/jboss/tools
 RUN /opt/jboss/tools/build-keycloak.sh
