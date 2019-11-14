@@ -36,6 +36,8 @@ SYS_PROPS=""
 file_env 'KEYCLOAK_USER'
 file_env 'KEYCLOAK_PASSWORD'
 
+
+
 $KEYCLOAK_USER=admin
 $KEYCLOAK_PASSWORD=admin
 
