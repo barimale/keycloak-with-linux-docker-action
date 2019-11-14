@@ -2,15 +2,15 @@
 name: 'Create preconfigured keycloak instance'
 description: 'Run Keycloak, create admin, import realm'
 inputs:
-  admin-account-name:  # id of input
+  admin-account-name:
     description: 'admin account name'
     required: true
     default: 'admin'
-  admin-account-password:  # id of input
+  admin-account-password:
     description: 'admin account password'
     required: true
     default: 'admin'
-  realm-path:  # id of input
+  realm-path:
     description: 'realm-path'
     required: true
     default: '/opt/jboss/tools/realm-export.json'
