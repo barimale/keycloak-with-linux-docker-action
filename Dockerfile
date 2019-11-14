@@ -11,9 +11,11 @@ ENV JBOSS_HOME /opt/jboss/keycloak
 
 USER root
 ADD tools/docker-entrypoint.sh /opt/jboss/tools/
+ADD realm-export.json /opt/jboss/tools/
 
 USER root
 RUN chmod 777 /opt/jboss/tools/docker-entrypoint.sh
+RUN chmod 777 /opt/jboss/tools/realm-export.json
 
 USER 1000
 
