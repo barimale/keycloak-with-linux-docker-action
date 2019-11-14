@@ -20,8 +20,12 @@ USER root
 RUN microdnf update -y && microdnf install -y gzip hostname java-11-openjdk-headless openssl tar which && microdnf clean all
 
 USER root
-
 ADD tools /opt/jboss/tools
+
+USER root
+RUN chmod -R 777 /opt/jboss/tools
+
+USER root
 RUN /opt/jboss/tools/build-keycloak.sh
 
 USER 1000
