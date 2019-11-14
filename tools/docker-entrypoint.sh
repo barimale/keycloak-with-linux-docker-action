@@ -38,8 +38,8 @@ file_env 'KEYCLOAK_PASSWORD'
 
 
 
-$KEYCLOAK_USER=admin
-$KEYCLOAK_PASSWORD=admin
+KEYCLOAK_USER=admin
+KEYCLOAK_PASSWORD=admin
 
 if [ -n "$KEYCLOAK_USER" ] && [ -n "$KEYCLOAK_PASSWORD" ]; then
     /opt/jboss/keycloak/bin/add-user-keycloak.sh --user "$KEYCLOAK_USER" --password "$KEYCLOAK_PASSWORD"
