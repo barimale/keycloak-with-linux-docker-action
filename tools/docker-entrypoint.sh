@@ -36,10 +36,6 @@ SYS_PROPS=""
 file_env 'KEYCLOAK_USER'
 file_env 'KEYCLOAK_PASSWORD'
 
-echo "$KEYCLOAK_USER"
-
-echo "$KEYCLOAK_PASSWORD"
-
 if [ -n "$KEYCLOAK_USER" ] && [ -n "$KEYCLOAK_PASSWORD" ]; then
     /opt/jboss/keycloak/bin/add-user-keycloak.sh --user "$KEYCLOAK_USER" --password "$KEYCLOAK_PASSWORD"
 fi
