@@ -14,11 +14,10 @@ inputs:
     description: 'realm-path'
     required: true
     default: 'realm-export.json'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
+  env:
+  
   image: 'docker://jboss/keycloak'
   args:
     - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
