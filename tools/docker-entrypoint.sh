@@ -228,4 +228,11 @@ fi
 # Start Keycloak #
 ##################
 
+echo "========================================================================="
+echo ""
+echo "   Start Keycloak 
+echo ""
+echo "========================================================================="
+echo ""
+
 exec /opt/jboss/keycloak/bin/standalone.sh $SYS_PROPS $@ &
