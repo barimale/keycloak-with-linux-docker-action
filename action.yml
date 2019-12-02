@@ -10,14 +10,15 @@ inputs:
     description: 'admin account password'
     required: true
     default: 'admin'
-  realm-path:
-    description: 'realm-path'
+  realm-name:
+    description: 'realm-name'
     required: true
-    default: '/opt/jboss/tools/realm-export.json'
+    default: 'realm-export.json'
 runs:
   using: 'docker'
-  image: jboss/keycloak:latest
+  image: Dockerfile
   args:
     - -DKEYCLOAK_USER=${{inputs.admin-account-name }}
     - -DKEYCLOAK_PASSWORD=${{inputs.admin-account-password }}
-    - -DKEYCLOAK_IMPORT=${{inputs.realm-path }}
+    - -DKEYCLOAK_IMPORT_REALM=${{inputs.realm-name }}
+   
